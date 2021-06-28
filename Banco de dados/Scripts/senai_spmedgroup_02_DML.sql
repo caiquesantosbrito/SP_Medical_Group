@@ -3,27 +3,27 @@
 USE SP_Medical_Group
 GO
 
-INSERT INTO tipoUsuario(TipoUsuario)
+INSERT INTO tiposUsuarios(TiposUsuario)
 VALUES			('Administrador')
 				,('Medico')
 				,('Paciente');
 GO
 
-INSERT INTO usuario(IdTipoUsuario, Email, Senha)
-VALUES				 (1, 'fernando.strada@spmedicalgroup.com.br', '12345')
-					,(2, 'ricardo.lemos@spmedicalgroup.com.br', '1234')
-					,(2, 'roberto.possarle@spmedicalgroup.com.br', '1234')
-					,(2, 'helena.souza@spmedicalgroup.com.br', '1234')
-					,(3, 'ligia@gmail.com', '123')
-					,(3, 'alexandre@gmail.com', '123')
-					,(3, 'fernando@gmail.com', '123')
+INSERT INTO usuarios(IdTiposUsuario, Email, Senha)
+VALUES				 (1, 'fernando.strada@spmedicalgroup.com.br', '123a')
+					,(2, 'ricardo.lemos@spmedicalgroup.com.br', '123m')
+					,(2, 'roberto.possarle@spmedicalgroup.com.br', '123m')
+					,(2, 'helena.souza@spmedicalgroup.com.br', '123m')
+					,(3, 'ligia@gmail.com', '123p')
+					,(3, 'alexandre@gmail.com', '123p')
+					,(3, 'fernando@gmail.com', '123p')
 					,(3, 'henrique@gmail.com', '123')
-					,(3, 'joao@hotmail.com', '123')
-					,(3, 'bruno@gmail.com', '123')
-					,(3, 'mariana@outlook.com', '123');
+					,(3, 'joao@hotmail.com', '123p')
+					,(3, 'bruno@gmail.com', '123p')
+					,(3, 'mariana@outlook.com', '123p');
 GO
 
-INSERT INTO especialidade(Especialidade)
+INSERT INTO especialidades(Especialidade)
 VALUES				('Acupuntura')
 					,('Anestesiologia')
 					,('Angiologia')
@@ -43,17 +43,17 @@ VALUES				('Acupuntura')
 					,('Psiquiatria');
 GO
 
-INSERT INTO clinica(CNPJ, NomeClinica, RazaoSocial, Endereco)
-VALUES				('86.400.902/0001-30', 'Clinica Possarle', 'SP Medical Group',	'Av. Barão Limeira, 532, São Paulo, SP');
+INSERT INTO clinicas(CNPJ, NomeFantasia, RazaoSocial, Endereco, HorarioAbertura, HorarioFechamento)
+VALUES				('86.400.902/0001-30', 'Clinica Possarle', 'SP Medical Group',	'Av. Barão Limeira, 532, São Paulo, SP', '07:00:00', '19:00:00');
 GO
 
-INSERT INTO medico(IdUsuario, IdEspecialidade, IdClinica, Nome, Crm)
+INSERT INTO medicos(IdUsuario, IdEspecialidade, IdClinica, Nome, Crm)
 VALUES				(2, 2, 1, 'Ricardo Lemos', '54356-SP')
 					,(3, 17, 1, 'Roberto Possarle', '53452-SP')
 					,(4, 16, 1, 'Helena Strada', '65463-SP');
 GO
 
-INSERT INTO paciente(IdUsuario, Nome, DataNascimento, Telefone, RG, CPF, Endereco)
+INSERT INTO pacientes(IdUsuario, Nome, DataNasc, Telefone, RG, CPF, Endereco)
 VALUES				(5,'Ligia',	'13/10/1983',34567654,	'43522543-5',	'94839859000',	'Rua Estado de Israel 240, São Paulo, Estado de São Paulo, 04022-000')
 					,(6,'Alexandre',	'23/07/2001',987656543,	'32654345-7',	'73556944057',	'Av. Paulista, 1578 - Bela Vista, São Paulo - SP, 01310-200')
 					,(7,'Fernando',	'10/10/1978',972084453,	'54636525-3',	'16839338002',	'Av. Ibirapuera - Indianópolis, 2927,  São Paulo - SP, 04029-200')
@@ -63,13 +63,13 @@ VALUES				(5,'Ligia',	'13/10/1983',34567654,	'43522543-5',	'94839859000',	'Rua E
 					,(11,'Mariana',	'05/03/2018',NULL,'54566266-8',	'13771913039',	'R Sao Antonio, 232 - Vila Universal, Barueri - SP, 06407-140');
 GO
 
-INSERT INTO situacao(Situacao)
+INSERT INTO situacaoConsultas(Situacao)
 VALUES				('Agendada')
 					,('Realizada')
 					,('Cancelada');
 GO
 
-INSERT INTO consulta(IdPaciente, IdMedico, IdSituacao, DataConsulta, Descricao)
+INSERT INTO consultas(IdPaciente, IdMedico, IdSituacao, DataConsulta, Descricao)
 VALUES					(7,	3,	2,	'20/01/2020 15:00', '')	
 						,(2,	2,	3,	'06/01/2020 10:00', '')	
 						,(3,	2,	2,	'07/02/2020 11:00', '')	
