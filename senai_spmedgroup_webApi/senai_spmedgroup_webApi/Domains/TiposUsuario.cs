@@ -14,7 +14,7 @@ namespace senai_spmedgroup_webApi.Domains
         }
 
         public int IdTiposUsuario { get; set; }
-        [Required(ErrorMessage = "É obrigatório definir um nome para o Tipo de Usuário!")]
+        [Required(ErrorMessage = "É obrigatório definir um nome pro Tipo de Usuário!")]
         public string TiposUsuario1 { get; set; }
 
         public virtual ICollection<Usuario> Usuarios { get; set; }
