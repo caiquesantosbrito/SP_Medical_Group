@@ -1,9 +1,9 @@
 -- DDL
 
-CREATE DATABASE SP_Medical_Group
+CREATE DATABASE Sp_Medical_Group
 GO
 
-USE SP_Medical_Group
+USE Sp_Medical_Group
 GO
 
 CREATE TABLE tiposUsuarios(

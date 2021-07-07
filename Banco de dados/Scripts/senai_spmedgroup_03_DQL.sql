@@ -1,6 +1,6 @@
 -- DQL
 
-USE SP_Medical_Group
+USE Sp_Medical_Group
 GO
 
 -- Função que calcula a quantidade de médicos dado certa especialidade.

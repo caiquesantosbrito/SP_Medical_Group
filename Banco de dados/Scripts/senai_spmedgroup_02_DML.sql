@@ -1,6 +1,6 @@
 -- DML
 
-USE SP_Medical_Group
+USE Sp_Medical_Group
 GO
 
 INSERT INTO tiposUsuarios(TiposUsuario)
@@ -10,17 +10,17 @@ VALUES			('Administrador')
 GO
 
 INSERT INTO usuarios(IdTiposUsuario, Email, Senha)
-VALUES				 (1, 'fernando.strada@spmedicalgroup.com.br', '123a')
-					,(2, 'ricardo.lemos@spmedicalgroup.com.br', '123m')
-					,(2, 'roberto.possarle@spmedicalgroup.com.br', '123m')
-					,(2, 'helena.souza@spmedicalgroup.com.br', '123m')
-					,(3, 'ligia@gmail.com', '123p')
-					,(3, 'alexandre@gmail.com', '123p')
-					,(3, 'fernando@gmail.com', '123p')
-					,(3, 'henrique@gmail.com', '123')
-					,(3, 'joao@hotmail.com', '123p')
-					,(3, 'bruno@gmail.com', '123p')
-					,(3, 'mariana@outlook.com', '123p');
+VALUES				 (1, 'fernando.strada@spmedicalgroup.com.br', '1234')
+					,(2, 'ricardo.lemos@spmedicalgroup.com.br', '1234m')
+					,(2, 'roberto.possarle@spmedicalgroup.com.br', '1234m')
+					,(2, 'helena.souza@spmedicalgroup.com.br', '1234m')
+					,(3, 'ligia@gmail.com', '1234p')
+					,(3, 'alexandre@gmail.com', '1234p')
+					,(3, 'fernando@gmail.com', '1234p')
+					,(3, 'henrique@gmail.com', '1234p')
+					,(3, 'joao@hotmail.com', '1234p')
+					,(3, 'bruno@gmail.com', '1234p')
+					,(3, 'mariana@outlook.com', '1234p');
 GO
 
 INSERT INTO especialidades(Especialidade)
